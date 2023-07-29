@@ -16,28 +16,32 @@ function App() {
     <>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/categories" element={<Categories books={books} onAdd={handleAddBook} />} />
+        <Route path="/" element={<Books books={books} onAdd={handleAddBook} />} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
     </>
   );
 }
 
-function Home() {
-  return <h1>Home Page</h1>;
-}
-
-function Categories({ books, onAdd }) {
+function Books({ books, onAdd }) {
   return (
     <>
-      <h1>Categories Page</h1>
+      <h1>Book Page</h1>
       <BookList books={books} />
       <BookForm onAdd={onAdd} />
     </>
   );
 }
 
-Categories.propTypes = {
+function Categories() {
+  return (
+    <>
+      <h1>Categories Page</h1>
+    </>
+  );
+}
+
+Books.propTypes = {
   books: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
