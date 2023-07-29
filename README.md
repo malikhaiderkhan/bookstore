@@ -1,7 +1,7 @@
 
 <div align="center">
   
-  <h1><b>Math Magicians</b></h1>
+  <h1><b>Bookstore</b></h1>
 
 </div>
 
@@ -26,9 +26,9 @@
 - [❓ FAQ ](#faq)
 - [📝 License ](#license)
 
-# 📖 [Math-Magicians!] <a name="about-project"></a>
+# 📖 [Bookstore!] <a name="about-project"></a>
 
-**[Math-Magicians!]** is a project in React module of Microverse.
+**[Bookstore!]** is a project in React module of Microverse.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -39,9 +39,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[React-Components]**
-- **[Math-Calculator]**
-- **[Math-Quotes]**
+- **[Add-Book]**
+- **[Book-List]**
 - **[Linters]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -69,15 +68,15 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-cd Leaderboard
-git clone git@github.com:malikhaiderkhan/Leaderboard.git
+cd bookstore
+git clone git@github.com:malikhaiderkhan/bookstore.git
 ```
 
 ### Install
 Install this project with:
 
 ```sh
-cd Math-Magician
+cd bookstore
 npm start
 ```
 
@@ -119,7 +118,7 @@ To run the project, execute the "index.html" file in your browser
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **[Add calculator features]**
+- **[fetch data from API]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,7 +142,7 @@ I would like to thank Microverse, my Learning partner and Standup Team for suppo
 
 - **How you clone the repo?**
 
-  - git clone https://github.com/malikhaiderkhan/Math-Magicians.git
+  - git clone https://github.com/malikhaiderkhan/bookstore.git
 
 - **How you install node?**
 
