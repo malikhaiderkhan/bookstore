@@ -134,7 +134,7 @@ If you like this project you can follow my work through my social networks
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse, my Learning partner and Standup Team for supporting me.
+I would like to thank Microverse, my Learning partner, Morning Session group and Standup Team for supporting me.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
