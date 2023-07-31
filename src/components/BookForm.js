@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 
 function BookForm({ onAdd }) {
   const [title, setTitle] = useState('');
@@ -9,6 +10,7 @@ function BookForm({ onAdd }) {
     e.preventDefault();
     if (title && author) {
       const newBook = {
+        id: uuidv4(),
         title,
         author,
       };
