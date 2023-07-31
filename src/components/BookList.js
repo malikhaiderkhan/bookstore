@@ -1,8 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 
-function BookList({ books }) {
+function BookList() {
+  const books = useSelector((state) => state.books.books);
+
   if (!books || books.length === 0) {
     return <p>No books found.</p>;
   }
@@ -16,15 +18,5 @@ function BookList({ books }) {
     </>
   );
 }
-
-BookList.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};
 
 export default BookList;
