@@ -6,6 +6,7 @@ import Navigation from './components/Navigation';
 import BookList from './components/BookList';
 import BookForm from './components/BookForm';
 import { addBook } from './redux/books/booksSlice';
+import { checkStatus } from './redux/categories/categoriesSlice';
 
 function App() {
   const dispatch = useDispatch();
@@ -32,9 +33,12 @@ function Books({ books, onAdd }) {
 }
 
 function Categories() {
+  const status = useSelector(checkStatus);
+
   return (
     <>
       <h1>Categories Page</h1>
+      <p>{status}</p>
     </>
   );
 }
