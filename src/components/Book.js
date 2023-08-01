@@ -18,7 +18,7 @@ function Book({ book }) {
         {' '}
         {book.author}
       </p>
-      {/* Only display the delete button without any onClick action */}
+      <p>{book.category}</p>
       <button type="button" onClick={handleDeleteClick}>
         Delete
       </button>
@@ -31,6 +31,7 @@ Book.propTypes = {
     item_id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 
