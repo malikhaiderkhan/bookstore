@@ -5,18 +5,21 @@ import { v4 as uuidv4 } from 'uuid';
 function BookForm({ onAdd }) {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title && author) {
       const newBook = {
-        id: uuidv4(),
+        item_id: uuidv4(),
         title,
         author,
+        category,
       };
       onAdd(newBook);
       setTitle('');
       setAuthor('');
+      setCategory('');
     }
   };
 
@@ -34,6 +37,13 @@ function BookForm({ onAdd }) {
         placeholder="Author"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
+        required
+      />
+      <input
+        type="text"
+        placeholder="Category"
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
         required
       />
       <button type="submit">Add Book</button>

@@ -13,7 +13,7 @@ function BookList() {
     <>
       <h2>Book List</h2>
       {books.map((book) => (
-        <Book key={book.id} book={book} />
+        <Book key={book.item_id} book={book} />
       ))}
     </>
   );

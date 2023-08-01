@@ -7,7 +7,7 @@ function Book({ book }) {
   const dispatch = useDispatch();
 
   const handleDeleteClick = () => {
-    dispatch(removeBook(book.id));
+    dispatch(removeBook(book.item_id));
   };
 
   return (
@@ -18,7 +18,7 @@ function Book({ book }) {
         {' '}
         {book.author}
       </p>
-      {/* Only display the delete button without any onClick action */}
+      <p>{book.category}</p>
       <button type="button" onClick={handleDeleteClick}>
         Delete
       </button>
@@ -28,9 +28,10 @@ function Book({ book }) {
 
 Book.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    item_id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 
