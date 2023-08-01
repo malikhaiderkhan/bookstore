@@ -7,7 +7,7 @@ function Book({ book }) {
   const dispatch = useDispatch();
 
   const handleDeleteClick = () => {
-    dispatch(removeBook(book.id));
+    dispatch(removeBook(book.item_id));
   };
 
   return (
@@ -28,7 +28,7 @@ function Book({ book }) {
 
 Book.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    item_id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   }).isRequired,

@@ -10,7 +10,7 @@ function BookForm({ onAdd }) {
     e.preventDefault();
     if (title && author) {
       const newBook = {
-        id: uuidv4(),
+        item_id: uuidv4(),
         title,
         author,
       };
