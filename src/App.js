@@ -1,22 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 import Navigation from './components/Navigation';
 import BookList from './components/BookList';
 import BookForm from './components/BookForm';
+import { addBook } from './redux/books/booksSlice';
+import { checkStatus } from './redux/categories/categoriesSlice';
 
 function App() {
-  const [books, setBooks] = useState([]);
-
-  const handleAddBook = (newBook) => {
-    setBooks([...books, newBook]);
-  };
-
+  const dispatch = useDispatch();
+  const books = useSelector((state) => state.books.books);
   return (
     <>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Books books={books} onAdd={handleAddBook} />} />
+        <Route path="/" element={<Books books={books} onAdd={(newBook) => dispatch(addBook(newBook))} />} />
         <Route path="/categories" element={<Categories />} />
       </Routes>
     </>
@@ -34,9 +33,12 @@ function Books({ books, onAdd }) {
 }
 
 function Categories() {
+  const status = useSelector(checkStatus);
+
   return (
     <>
       <h1>Categories Page</h1>
+      <p>{status}</p>
     </>
   );
 }
