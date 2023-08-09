@@ -5,17 +5,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import Navigation from './components/Navigation';
 import BookList from './components/BookList';
 import BookForm from './components/BookForm';
-import { addBook } from './redux/books/booksSlice';
 import { checkStatus } from './redux/categories/categoriesSlice';
+import { addBook } from './redux/books/booksSlice';
 
 function App() {
-  const dispatch = useDispatch();
   const books = useSelector((state) => state.books.books);
+  const dispatch = useDispatch();
+
+  const onAdd = (newBook) => {
+    dispatch(addBook(newBook));
+  };
+
   return (
     <>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Books books={books} onAdd={(newBook) => dispatch(addBook(newBook))} />} />
+        <Route path="/" element={<BookList books={books} onAdd={onAdd} />} />
         <Route path="/categories" element={<Categories />} />
       </Routes>
     </>
@@ -45,9 +50,10 @@ function Categories() {
 
 Books.propTypes = {
   books: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   })).isRequired,
   onAdd: PropTypes.func.isRequired,
 };
