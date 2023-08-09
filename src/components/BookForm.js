@@ -18,11 +18,13 @@ function BookForm() {
         author,
         category,
       };
-      dispatch(addBook(newBook));
-      dispatch(fetchBooks());
-      setTitle('');
-      setAuthor('');
-      setCategory('');
+      dispatch(addBook(newBook))
+        .then(() => {
+          dispatch(fetchBooks());
+          setTitle('');
+          setAuthor('');
+          setCategory('');
+        });
     }
   };
 

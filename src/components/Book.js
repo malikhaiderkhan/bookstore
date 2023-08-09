@@ -8,8 +8,10 @@ function Book({ book }) {
   const dispatch = useDispatch();
 
   const handleDeleteClick = () => {
-    dispatch(removeBook(book.item_id));
-    dispatch(fetchBooks());
+    dispatch(removeBook(book.item_id))
+      .then(() => {
+        dispatch(fetchBooks());
+      });
   };
 
   return (
