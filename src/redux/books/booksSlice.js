@@ -47,14 +47,22 @@ const bookSlice = createSlice({
       })
       .addCase(fetchBooks.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.books = action.payload;
+        const data = Object.keys(action.payload).map((item) => {
+          const book = {};
+          book.author = action.payload[item][0].author;
+          book.category = action.payload[item][0].category;
+          book.title = action.payload[item][0].title;
+          book.item_id = item;
+          return book;
+        });
+        state.books = data;
       })
       .addCase(fetchBooks.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       })
-      .addCase(addBook.fulfilled, (state, action) => {
-        state.books.push(action.payload);
+      .addCase(addBook.fulfilled, (state) => {
+        state.isLoading = false;
       })
       .addCase(addBook.rejected, (state, action) => {
         state.error = action.payload;
@@ -62,6 +70,7 @@ const bookSlice = createSlice({
       .addCase(removeBook.fulfilled, (state, action) => {
         const bookIdToRemove = action.payload;
         state.books = state.books.filter((book) => book.item_id !== bookIdToRemove);
+        state.isLoading = false;
       })
       .addCase(removeBook.rejected, (state, action) => {
         state.error = action.payload;

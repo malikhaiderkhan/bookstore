@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { fetchBooks, addBook } from '../redux/books/booksSlice';
 
 function BookForm() {
   const [title, setTitle] = useState('');
@@ -11,9 +11,6 @@ function BookForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Title:', title);
-    console.log('Author:', author);
-    console.log('Category:', category);
     if (title && author && category) {
       const newBook = {
         item_id: uuidv4(),
@@ -21,8 +18,8 @@ function BookForm() {
         author,
         category,
       };
-      console.log('New Book:', newBook);
       dispatch(addBook(newBook));
+      dispatch(fetchBooks());
       setTitle('');
       setAuthor('');
       setCategory('');
