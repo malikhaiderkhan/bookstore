@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 
 function Book({ book }) {
+  const { title, author, category } = book;
   const dispatch = useDispatch();
 
   const handleDeleteClick = () => {
@@ -12,13 +13,15 @@ function Book({ book }) {
 
   return (
     <div>
-      <h2>{book.title}</h2>
+      <h2>{title}</h2>
       <p>
         Author:
-        {' '}
-        {book.author}
+        {author}
       </p>
-      <p>{book.category}</p>
+      <p>
+        Category:
+        {category}
+      </p>
       <button type="button" onClick={handleDeleteClick}>
         Delete
       </button>
@@ -28,7 +31,7 @@ function Book({ book }) {
 
 Book.propTypes = {
   book: PropTypes.shape({
-    item_id: PropTypes.number.isRequired,
+    item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
