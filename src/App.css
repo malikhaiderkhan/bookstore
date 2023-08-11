@@ -82,7 +82,7 @@ ul a {
 }
 
 .book-panel {
-  width: 21%;
+  width: 22%;
   margin: 0 1rem 0;
   gap: 1px;
 }
@@ -141,7 +141,7 @@ ul a {
 }
 
 .dis-title {
-  width: 12.313rem;
+  width: 15.313rem;
   font-size: 1.575rem;
   font-weight: bold;
   font-stretch: normal;
@@ -270,7 +270,7 @@ form {
 }
 
 .chap {
-  width: 9.5rem;
+  width: 10.5rem;
   height: 1.125rem;
   margin: 0.063rem 3.625rem 0 3.688rem;
   opacity: 0.5;
