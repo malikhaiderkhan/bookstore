@@ -5,6 +5,7 @@ body {
   margin: 0 2.5rem 4.063rem 0;
   padding: 0 0 49.625rem;
   border-radius: 4px;
+
   /* box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05); */
   background-color: #fafafa;
 }
@@ -14,7 +15,7 @@ body {
   height: 3.938rem;
   margin: 0 0 2.375rem;
   padding: 1.138rem 6.188rem 1.688rem 6.25rem;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 ul {
@@ -31,7 +32,6 @@ ul a {
   width: 15rem;
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
-  font-family: Montserrat;
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -45,7 +45,6 @@ ul a {
   width: 3.688rem;
   height: 1rem;
   margin: 1.125rem 2.563rem 0.688rem 0;
-  font-family: Montserrat;
   font-size: 1rem;
   font-weight: normal;
   font-stretch: normal;
@@ -60,7 +59,6 @@ ul a {
   height: 1rem;
   margin: 1.125rem 41.5rem 0.688rem 2.563rem;
   opacity: 0.5;
-  font-family: Montserrat;
   font-size: 1rem;
   font-weight: normal;
   font-stretch: normal;
@@ -80,7 +78,7 @@ ul a {
   padding: 1rem 9.188rem 1rem 1.688rem;
   border-radius: 4px;
   border: solid 1px lightgray;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .book-panel {
@@ -107,6 +105,7 @@ ul a {
   position: absolute;
   top: 0;
   left: 0;
+  rotate: 45deg;
 }
 
 .circle {
@@ -132,7 +131,6 @@ ul a {
   height: 1.125rem;
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
-  font-family: Montserrat;
   font-size: 1rem;
   font-weight: bold;
   font-stretch: normal;
@@ -144,7 +142,6 @@ ul a {
 
 .dis-title {
   width: 12.313rem;
-  font-family: RobotoSlab;
   font-size: 1.575rem;
   font-weight: bold;
   font-stretch: normal;
@@ -158,7 +155,6 @@ ul a {
 
 .dis-author {
   width: 6.688rem;
-  font-family: RobotoSlab;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -176,7 +172,6 @@ ul a {
   width: 4.25rem;
   height: 2.438rem;
   margin: 0.063rem 5.75rem 0 0.688rem;
-  font-family: Montserrat;
   font-size: 2rem;
   font-weight: normal;
   font-stretch: normal;
@@ -191,7 +186,6 @@ ul a {
   height: 1.125rem;
   margin: 0.438rem 4.938rem 0.75rem 0.75rem;
   opacity: 0.5;
-  font-family: Montserrat;
   font-size: 0.875rem;
   font-weight: normal;
   font-stretch: normal;
@@ -201,11 +195,11 @@ ul a {
   color: #121212;
 }
 
-.new-book, .no-book {
+.new-book,
+.no-book {
   width: 10.875rem;
   height: 1.5rem;
   margin: 1.813rem 32.75rem 1.188rem 0;
-  font-family: Montserrat;
   font-size: 1.25rem;
   font-weight: bold;
   font-stretch: normal;
@@ -213,26 +207,40 @@ ul a {
   line-height: normal;
   letter-spacing: -0.18px;
   color: #888;
-  padding: 1.438rem 6.188rem 0 8.50rem;
+  padding: 1.438rem 6.188rem 0 8.5rem;
 }
 
 form {
-  padding: 0 6.188rem 1.688rem 8.50rem;
+  padding: 0 6.188rem 1.688rem 8.5rem;
 }
 
-.category-input, .title-input, .author-input {
+.category-input,
+.title-input,
+.author-input {
   width: 14.813rem;
   height: 2.013rem;
   margin: 1.188rem 1.125rem 0;
   padding: 0.375rem 0.938rem 0.563rem 1rem;
   border-radius: 4px;
   border: solid 1px lightgray;
-  background-color: #ffffff;
+  background-color: #fff;
   font-size: 15px;
 }
 
 .title-input {
   margin-left: 0;
+}
+
+.category-input {
+  height: 3.013rem;
+}
+
+.select-cat {
+  padding: 0%;
+}
+
+.form-data {
+  display: flex;
 }
 
 .add-btn {
@@ -242,8 +250,9 @@ form {
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border-radius: 3px;
   background-color: #0290ff;
-  color: #ffffff;
+  color: #fff;
   border: none;
+  cursor: pointer;
 }
 
 .chapter {
@@ -265,7 +274,6 @@ form {
   height: 1.125rem;
   margin: 0.063rem 3.625rem 0 3.688rem;
   opacity: 0.5;
-  font-family: RobotoSlab;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -279,7 +287,6 @@ form {
   width: 5.688rem;
   height: 1.313rem;
   margin: 0.438rem 6.813rem 0.25rem 3.688rem;
-  font-family: RobotoSlab;
   font-size: 1.2rem;
   font-weight: 300;
   font-stretch: normal;
@@ -296,13 +303,13 @@ form {
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   border-radius: 3px;
   background-color: #0290ff;
-  color: #ffffff;
+  color: #fff;
   border: none;
+  cursor: pointer;
 }
 
 .btn {
   height: 1.188rem;
-  font-family: RobotoSlab;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -310,7 +317,7 @@ form {
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
-  background-color: #ffffff;
+  background-color: #fff;
   border: none;
   cursor: pointer;
 }
