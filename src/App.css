@@ -1,80 +1,188 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  width: 87.5rem;
+  height: 68.563rem;
+  margin: 0 2.5rem 4.063rem 0;
+  padding: 0 0 49.625rem;
+  border-radius: 4px;
+  /* box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05); */
+  background-color: #fafafa;
 }
 
-nav {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
+.panel-bg {
+  width: 87.5rem;
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: #ffffff;
 }
 
-nav ul {
+ul {
+  display: flex;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-nav li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-nav a {
+ul a {
   text-decoration: none;
-  color: #fff;
+  color: var(--black-two);
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+.Bookstore-CMS {
+  width: 15rem;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
 }
 
-h1,
-h2,
-h3 {
-  margin-bottom: 10px;
+.Books {
+  width: 3.688rem;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+}
+
+.Categories {
+  width: 6.563rem;
+  height: 1rem;
+  margin: 1.125rem 41.5rem 0.688rem 2.563rem;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+}
+
+.top-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75rem;
+  height: 10.625rem;
+  margin: 2.313rem 6.25rem 0;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px lightgray;
+  background-color: #ffffff;
+}
+
+.book-panel {
+  width: 16%;
+  margin: 2.313rem 1rem 0;
+}
+
+.progress-container {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Same as width for a circular shape */
+  position: relative;
+}
+
+.progress-bar {
+  width: 4.25rem;
+  height: 4.25rem;
+  background-color: transparent;
+  border: 5px solid #f0f0f0;
+  border-top-color: #379cf6;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.dis-cat {
+  width: 75rem;
+  border-radius: 4px;
+  border: solid 1px var(--white-three);
+  background-color: var(--white-two);
+}
+
+.dis-title {
+  width: 12.313rem;
+  font-family: RobotoSlab;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+}
+
+.dis-author {
+  width: 6.688rem;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.text-bar {
+  padding-left: 0px;
+  align-items: center;
+}
+
+.new-book, .no-book {
+  width: 10.875rem;
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+  padding: 1.438rem 6.188rem 0 8.50rem;
 }
 
 form {
-  display: flex;
-  margin-bottom: 10px;
+  padding: 0 6.188rem 1.688rem 8.50rem;
 }
 
-form input[type='text'] {
-  padding: 5px;
-  margin-right: 10px;
-  flex: 1;
+.category-input, .title-input, .author-input {
+  width: 14.813rem;
+  height: 2.013rem;
+  margin: 1.188rem 1.125rem 0;
+  padding: 0.375rem 0.938rem 0.563rem 1rem;
+  border-radius: 4px;
+  border: solid 1px lightgray;
+  background-color: #ffffff;
+  font-size: 15px;
 }
 
-form button {
-  padding: 5px 10px;
-  background-color: #333;
-  color: #fff;
+.title-input {
+  margin-left: 0;
+}
+
+.add-btn {
+  width: 11.5rem;
+  height: 2.913rem;
+  margin: 1.188rem 0 0 2.125rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #ffffff;
   border: none;
-  cursor: pointer;
-}
-
-.book {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.book h3 {
-  margin: 0;
-}
-
-.book p {
-  margin: 5px 0;
-}
-
-.book button {
-  padding: 5px 10px;
-  background-color: #f44336;
-  color: #fff;
-  border: none;
-  cursor: pointer;
 }

@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 
 function Navigation() {
   return (
-    <nav>
+    <nav className="panel-bg">
       <ul>
-        <li>
+        <h1 className="Bookstore-CMS">Bookstore CMS</h1>
+        <li className="Books">
           <Link to="/">Books</Link>
         </li>
-        <li>
+        <li className="Categories">
           <Link to="/categories">Categories</Link>
         </li>
       </ul>

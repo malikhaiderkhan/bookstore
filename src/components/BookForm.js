@@ -32,8 +32,9 @@ function BookForm() {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Title"
+        placeholder="Book title"
         value={title}
+        className="title-input"
         onChange={(e) => setTitle(e.target.value)}
         required
       />
@@ -41,6 +42,7 @@ function BookForm() {
         type="text"
         placeholder="Author"
         value={author}
+        className="author-input"
         onChange={(e) => setAuthor(e.target.value)}
         required
       />
@@ -48,10 +50,11 @@ function BookForm() {
         type="text"
         placeholder="Category"
         value={category}
+        className="category-input"
         onChange={(e) => setCategory(e.target.value)}
         required
       />
-      <button type="submit">Add Book</button>
+      <button type="submit" className="add-btn">ADD BOOK</button>
     </form>
   );
 }
