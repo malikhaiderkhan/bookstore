@@ -26,6 +26,7 @@ function BookList() {
       {flattenedBooks.map((book) => (
         <Book key={book.item_id} book={book} />
       ))}
+      <hr className="horizontal-line" />
       <h2 className="new-book">ADD NEW BOOK</h2>
       <BookForm />
     </div>

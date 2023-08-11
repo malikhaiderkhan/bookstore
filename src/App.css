@@ -11,9 +11,9 @@ body {
 
 .panel-bg {
   width: 87.5rem;
-  height: 5.938rem;
+  height: 3.938rem;
   margin: 0 0 2.375rem;
-  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  padding: 1.138rem 6.188rem 1.688rem 6.25rem;
   background-color: #ffffff;
 }
 
@@ -24,7 +24,7 @@ ul {
 
 ul a {
   text-decoration: none;
-  color: var(--black-two);
+  color: #121212;
 }
 
 .Bookstore-CMS {
@@ -52,7 +52,7 @@ ul a {
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
-  color: var(--black-two);
+  color: #121212;
 }
 
 .Categories {
@@ -67,31 +67,33 @@ ul a {
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
-  color: var(--black-two);
+  color: #121212;
 }
 
 .top-panel {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 75rem;
+  width: 65%;
   height: 10.625rem;
-  margin: 2.313rem 6.25rem 0;
-  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  margin: 2.313rem 6.25rem 0 8.8rem;
+  padding: 1rem 9.188rem 1rem 1.688rem;
   border-radius: 4px;
   border: solid 1px lightgray;
   background-color: #ffffff;
 }
 
 .book-panel {
-  width: 16%;
-  margin: 2.313rem 1rem 0;
+  width: 21%;
+  margin: 0 1rem 0;
+  gap: 1px;
 }
 
 .progress-container {
   width: 40px; /* Adjust size as needed */
   height: 40px; /* Same as width for a circular shape */
   position: relative;
+  top: -20px;
 }
 
 .progress-bar {
@@ -100,35 +102,64 @@ ul a {
   background-color: transparent;
   border: 5px solid #f0f0f0;
   border-top-color: #379cf6;
+  border-right-color: #379cf6;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
 }
 
+.circle {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-color: transparent;
+  border: 2px solid #f0f0f0;
+  border-radius: 50%;
+  position: absolute;
+  top: 4%;
+  right: 9%;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 18%;
+  margin-top: 12%;
+}
+
 .dis-cat {
-  width: 75rem;
-  border-radius: 4px;
-  border: solid 1px var(--white-three);
-  background-color: var(--white-two);
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
 }
 
 .dis-title {
   width: 12.313rem;
   font-family: RobotoSlab;
-  font-size: 1.375rem;
+  font-size: 1.575rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.2px;
-  color: var(--black-two);
+  color: #121212;
+  margin-top: 5px;
+  margin-bottom: -12px;
 }
 
 .dis-author {
   width: 6.688rem;
   font-family: RobotoSlab;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -138,8 +169,36 @@ ul a {
 }
 
 .text-bar {
-  padding-left: 0px;
-  align-items: center;
+  margin-left: 90px;
+}
+
+.percent {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.status {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
 }
 
 .new-book, .no-book {
@@ -185,4 +244,87 @@ form {
   background-color: #0290ff;
   color: #ffffff;
   border: none;
+}
+
+.chapter {
+  position: relative;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 100%;
+  background-color: #e8e8e8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.chap {
+  width: 9.5rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: RobotoSlab;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.chap-no {
+  width: 5.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-family: RobotoSlab;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.prog-btn {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #ffffff;
+  border: none;
+}
+
+.btn {
+  height: 1.188rem;
+  font-family: RobotoSlab;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.cmt-btn {
+  border-right: 1px solid #e8e8e8;
+  margin-left: -2%;
+}
+
+.edt-btn {
+  border-left: 1px solid #e8e8e8;
+}
+
+.horizontal-line {
+  border: 1px solid #e8e8e8;
+  margin: 3rem 11rem 1rem 9rem;
 }

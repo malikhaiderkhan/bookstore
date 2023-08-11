@@ -24,27 +24,28 @@ function Book({ book }) {
         <p className="dis-author">
           {author}
         </p>
-        <button type="button">
+        <button type="button" className="btn cmt-btn">
           Comments
         </button>
-        <button type="button" onClick={handleDeleteClick}>
+        <button type="button" onClick={handleDeleteClick} className="btn rmv-btn">
           Remove
         </button>
-        <button type="button">
+        <button type="button" className="btn edt-btn">
           Edit
         </button>
       </div>
       <div className="progress-container">
         <div className="progress-bar" />
-      </div>
-      <div className="text-bar">
-        <p>50%</p>
-        <p>Completed</p>
+        <div className="text-bar">
+          <p className="percent">50%</p>
+          <p className="status">Completed</p>
+        </div>
       </div>
       <div className="chapter">
-        <p>CURRENT CHAPTER</p>
-        <p>Chapter 17</p>
-        <button type="button">UPDATE PROGRESS</button>
+        <div className="vertical-line" />
+        <p className="chap">CURRENT CHAPTER</p>
+        <p className="chap-no">Chapter 17</p>
+        <button type="button" className="prog-btn">UPDATE PROGRESS</button>
       </div>
     </div>
   );
