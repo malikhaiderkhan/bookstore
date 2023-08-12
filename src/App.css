@@ -127,7 +127,7 @@ ul a {
 }
 
 .dis-cat {
-  width: 3.063rem;
+  width: 10.063rem;
   height: 1.125rem;
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
@@ -141,7 +141,7 @@ ul a {
 }
 
 .dis-title {
-  width: 15.313rem;
+  width: 16.313rem;
   font-size: 1.575rem;
   font-weight: bold;
   font-stretch: normal;
@@ -149,12 +149,12 @@ ul a {
   line-height: normal;
   letter-spacing: -0.2px;
   color: #121212;
-  margin-top: 5px;
-  margin-bottom: -12px;
+  margin-top: 6px;
+  margin-bottom: -7px;
 }
 
 .dis-author {
-  width: 6.688rem;
+  width: 8.688rem;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -270,7 +270,7 @@ form {
 }
 
 .chap {
-  width: 10.5rem;
+  width: 11.5rem;
   height: 1.125rem;
   margin: 0.063rem 3.625rem 0 3.688rem;
   opacity: 0.5;
@@ -284,7 +284,7 @@ form {
 }
 
 .chap-no {
-  width: 5.688rem;
+  width: 8.688rem;
   height: 1.313rem;
   margin: 0.438rem 6.813rem 0.25rem 3.688rem;
   font-size: 1.2rem;
