@@ -30,28 +30,41 @@ function BookForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        required
-      />
-      <input
-        type="text"
-        placeholder="Author"
-        value={author}
-        onChange={(e) => setAuthor(e.target.value)}
-        required
-      />
-      <input
-        type="text"
-        placeholder="Category"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-        required
-      />
-      <button type="submit">Add Book</button>
+      <div className="form-data">
+        <div className="input-data">
+          <input
+            type="text"
+            placeholder="Book title"
+            value={title}
+            className="title-input"
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
+          <input
+            type="text"
+            placeholder="Author"
+            value={author}
+            className="author-input"
+            onChange={(e) => setAuthor(e.target.value)}
+            required
+          />
+        </div>
+        <div className="select-cat">
+          <select
+            className="category-input"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            required
+          >
+            <option value="" disabled>Category</option>
+            <option value="Action">Action</option>
+            <option value="Science Fiction">Science Fiction</option>
+            <option value="Economy">Economy</option>
+            <option value="Thriller">Thriller</option>
+          </select>
+        </div>
+        <button type="submit" className="add-btn">ADD BOOK</button>
+      </div>
     </form>
   );
 }

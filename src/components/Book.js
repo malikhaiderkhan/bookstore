@@ -15,19 +15,38 @@ function Book({ book }) {
   };
 
   return (
-    <div>
-      <h2>{title}</h2>
-      <p>
-        Author:
-        {author}
-      </p>
-      <p>
-        Category:
-        {category}
-      </p>
-      <button type="button" onClick={handleDeleteClick}>
-        Delete
-      </button>
+    <div className="top-panel">
+      <div className="book-panel">
+        <p className="dis-cat">
+          {category}
+        </p>
+        <h2 className="dis-title">{title}</h2>
+        <p className="dis-author">
+          {author}
+        </p>
+        <button type="button" className="btn cmt-btn">
+          Comments
+        </button>
+        <button type="button" onClick={handleDeleteClick} className="btn rmv-btn">
+          Remove
+        </button>
+        <button type="button" className="btn edt-btn">
+          Edit
+        </button>
+      </div>
+      <div className="progress-container">
+        <div className="progress-bar" />
+        <div className="text-bar">
+          <p className="percent">50%</p>
+          <p className="status">Completed</p>
+        </div>
+      </div>
+      <div className="chapter">
+        <div className="vertical-line" />
+        <p className="chap">CURRENT CHAPTER</p>
+        <p className="chap-no">Chapter 17</p>
+        <button type="button" className="prog-btn">UPDATE PROGRESS</button>
+      </div>
     </div>
   );
 }
