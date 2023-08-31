@@ -51,7 +51,7 @@
 
 > Below is a link to my deployed project.
 
-- (https://64f0e34f2211da2784601c15--wondrous-treacle-e508b4.netlify.app/)
+- [Live Demo](https://64f0e34f2211da2784601c15--wondrous-treacle-e508b4.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
